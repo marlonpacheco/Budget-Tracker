@@ -8,9 +8,10 @@ const iconFiles = iconSizes.map(
 
 const staticFilesToPreCache = [
   "/",
-  "/index.html",
+  // "/index.html",
   "/assets/js/index.js",
-  "/assets/css/style.css",
+  "/assets/js/db.js",
+  "/assets/css/styles.css",
   "/manifest.webmanifest",
 ].concat(iconFiles);
 
@@ -24,7 +25,7 @@ self.addEventListener("install", function (evt) {
     })
   );
 
-  self.skipWaiting();
+  // self.skipWaiting();
 });
 
 // activate
@@ -42,7 +43,7 @@ self.addEventListener("activate", function (evt) {
     })
   );
 
-  self.clients.claim();
+  // self.clients.claim();
 });
 
 // fetch
